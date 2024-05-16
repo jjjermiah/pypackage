@@ -2,6 +2,13 @@
 
 
 
+## v0.11.1 (2024-05-16)
+
+### Fix
+
+* fix: remove the depends on for test pypi install ([`e60bac4`](https://github.com/jjjermiah/pypackage/commit/e60bac4093bcbd11c445bbc1bd943ed49bcfb5dd))
+
+
 ## v0.11.0 (2024-05-16)
 
 ### Feature
