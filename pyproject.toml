@@ -22,7 +22,7 @@ testmypixipkg = { path = ".", editable = true }
 
 [tool.pixi.environments]
 dev = { features = ["test"], solve-group = "default" }
-publish = { features = ["publish", "deploy"], solve-group = "default" }
+publish = { features = ["build", "release"], solve-group = "default" }
 
 [tool.pixi.tasks]
 
@@ -34,13 +34,13 @@ pytest-xdist = "*"
 [tool.pixi.feature.test.tasks]
 test = "pytest --numprocesses=auto -s --verbose --cov=testmypixipkg --cov-report=xml"
 
-[tool.pixi.feature.deploy.dependencies]
+[tool.pixi.feature.release.dependencies]
 python-semantic-release = ">=8.5.1"
 
-[tool.pixi.feature.publish.dependencies]
+[tool.pixi.feature.build.dependencies]
 hatch = "*"
 
-[tool.pixi.feature.publish.tasks]
+[tool.pixi.feature.build.tasks]
 # Builds the package and publishes it to the test.pypi.org repository
 build = { cmd = "hatch build --clean", inputs = ["src"], outputs = ["dist/*"] }
 publish = { cmd = "hatch publish --yes --repo test", inputs = [
