@@ -44,7 +44,7 @@ jobs:
 
             - name: Run pytest
               run: |
-                  pixi test
+                  pixi run test
     #     - name: Test with pytest
     #       run: |
     #         # Github action runners now have 4 cores
