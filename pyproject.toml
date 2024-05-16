@@ -70,4 +70,4 @@ test_pypi_install = { cmd = [
   "--extra-index-url",
   "https://pypi.org/simple",
   "testmypixipkg",
-], depends-on = ["publish"] }
+] }
