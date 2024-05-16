@@ -2,6 +2,13 @@
 
 
 
+## v0.3.0 (2024-05-16)
+
+### Feature
+
+* feat: third commit ([`b74434f`](https://github.com/jjjermiah/pypackage/commit/b74434f0413b0bce5bcb3fde27f110a40a36e8bd))
+
+
 ## v0.2.0 (2024-05-16)
 
 ### Feature
