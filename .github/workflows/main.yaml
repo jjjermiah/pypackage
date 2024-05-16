@@ -128,7 +128,11 @@ jobs:
                   pixi-version: v0.22.0
                   cache: true
                   locked: false
+
             - name: Publish to TestPyPI
+              env:
+                  HATCH_INDEX_USER: __token__
+                  HATCH_INDEX_AUTH: ${{ secrets.TEST_PYPI_API_TOKEN }}
               run: |
                   pixi run publish
 
