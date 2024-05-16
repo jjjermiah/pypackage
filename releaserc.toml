@@ -3,7 +3,7 @@ version_variables = [
   "src/testmypixipkg/__init__.py:version"
 ]
 version_toml = [
-  "pyproject.toml:version"
+  "pyproject.toml:project.version"
 ]
 assets = []
 build_command_env = []
