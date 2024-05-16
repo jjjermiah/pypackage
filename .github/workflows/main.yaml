@@ -9,18 +9,17 @@ on:
     branches: [main, development]
 
 jobs:
-
   ################################################################################################
   # Unit-Tests: Run unit tests using pytest
   ################################################################################################
   Unit-Tests:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 15 # Consider increasing timeout
-
+    env:
+      PIXI_ENV: "dev"
     strategy:
       matrix:
         os: [ubuntu-latest]
-        environments: [dev]
         # os: [ubuntu-latest, macos-latest, macos-14, windows-latest]
         # python-version: ["3.12", "3.11", "3.10"]
 
@@ -30,10 +29,10 @@ jobs:
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
-          environments: ${{ matrix.environments}}
+          environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
           cache: true
-          cache-key: pixi-ENV_${{ matrix.environments }}-
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           locked: false
 
       - name: Run pytest
@@ -54,20 +53,21 @@ jobs:
   ################################################################################################
   Ruff:
     runs-on: ubuntu-latest
+    env:
+      PIXI_ENV: "dev"
     strategy:
       matrix:
         os: [ubuntu-latest]
-        environments: [dev]
 
     steps:
       - uses: actions/checkout@v4
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
-          environments: ${{ matrix.environments}}
+          environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
           cache: true
-          cache-key: pixi-ENV_${{ matrix.environments }}-
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           locked: false
 
       - name: Run Ruff
@@ -129,11 +129,12 @@ jobs:
   ################################################################################################
   Publish-To-PyPi:
     needs: Semantic-Release
+    env:
+      PIXI_ENV: "publish"
     if: needs.Semantic-Release.outputs.released == 'true'
     strategy:
       matrix:
         os: [ubuntu-latest]
-        environments: [publish]
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -145,9 +146,9 @@ jobs:
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
-          environments: ${{ matrix.environments}}
+          environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          cache-key: pixi-ENV_${{ matrix.environments }}-
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           cache: true
           locked: false
 
@@ -188,12 +189,12 @@ jobs:
   ################################################################################################
   Publish-To-Test-PyPi:
     needs: Semantic-Release
-
+    env:
+      PIXI_ENV: "publish"
     if: needs.Semantic-Release.outputs.released == 'true'
     strategy:
       matrix:
         os: [ubuntu-latest]
-        environments: [publish]
 
     runs-on: ${{ matrix.os }}
 
@@ -206,9 +207,9 @@ jobs:
       - name: Install Pixi
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
-          environments: ${{ matrix.environments}}
+          environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          cache-key: pixi-ENV_${{ matrix.environments }}-
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           cache: true
           locked: false
 
