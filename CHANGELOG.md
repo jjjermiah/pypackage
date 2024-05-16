@@ -2,6 +2,17 @@
 
 
 
+## v0.10.0 (2024-05-16)
+
+### Feature
+
+* feat: add test install ([`1c43f7d`](https://github.com/jjjermiah/pypackage/commit/1c43f7db25bd92951fb5183796203f5d4952971f))
+
+### Fix
+
+* fix: auth vars ([`309c17c`](https://github.com/jjjermiah/pypackage/commit/309c17cae06d70009fd050520c7457de1fee64c4))
+
+
 ## v0.9.2 (2024-05-16)
 
 ### Fix
