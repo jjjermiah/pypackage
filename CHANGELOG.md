@@ -2,6 +2,13 @@
 
 
 
+## v0.4.0 (2024-05-16)
+
+### Feature
+
+* feat: add ci ([`fcdc753`](https://github.com/jjjermiah/pypackage/commit/fcdc7536d218e9deb88e5348576bc49eafe87d20))
+
+
 ## v0.3.0 (2024-05-16)
 
 ### Feature
