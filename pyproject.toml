@@ -1,6 +1,6 @@
 [project]
 name = "testmypixipkg"
-version = "0.15.1"
+version = "0.15.2"
 description = "Add a short description here"
 license = "MIT"
 readme = "README.md"

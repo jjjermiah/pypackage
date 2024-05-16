@@ -2,6 +2,20 @@
 
 
 
+## v0.15.2 (2024-05-16)
+
+### Chore
+
+* chore: lock ([`79ca798`](https://github.com/jjjermiah/pypackage/commit/79ca7989542568d1dbcce0795552c09801f98704))
+
+### Fix
+
+* fix: update releaserc.toml to set ignore_token_for_push to true instead of
+  false for better security practices ([`c52f356`](https://github.com/jjjermiah/pypackage/commit/c52f356f4beb982fddb6f20c6abd691fd8b9c152))
+
+* fix: update prefix ([`18a7e32`](https://github.com/jjjermiah/pypackage/commit/18a7e32d263610790976483f5724987c98a664d0))
+
+
 ## v0.15.1 (2024-05-16)
 
 ### Fix
