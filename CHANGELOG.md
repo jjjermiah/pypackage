@@ -2,6 +2,15 @@
 
 
 
+## v0.6.0 (2024-05-16)
+
+### Feature
+
+* feat: add better testing ([`494ad9a`](https://github.com/jjjermiah/pypackage/commit/494ad9af7060ac5f70c3df458461532573849c3b))
+
+* feat: add better testing ([`6c8b537`](https://github.com/jjjermiah/pypackage/commit/6c8b537b753a8c641633474a3c3623aa07895e84))
+
+
 ## v0.5.0 (2024-05-16)
 
 ### Feature
