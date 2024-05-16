@@ -2,6 +2,15 @@
 
 
 
+## v0.12.0 (2024-05-16)
+
+### Feature
+
+* feat: add pypi ([`12f3f55`](https://github.com/jjjermiah/pypackage/commit/12f3f5500b19e722a7ed8c2d2e7c4a0d16d08784))
+
+* feat: add publish-pypi ([`b261e14`](https://github.com/jjjermiah/pypackage/commit/b261e145d97a42a1cc348af5db868920aae97a28))
+
+
 ## v0.11.1 (2024-05-16)
 
 ### Fix
