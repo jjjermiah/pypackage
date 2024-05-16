@@ -2,6 +2,13 @@
 
 
 
+## v0.14.0 (2024-05-16)
+
+### Feature
+
+* feat: add readme and license ([`922a78e`](https://github.com/jjjermiah/pypackage/commit/922a78e93feef2b0ee5daced1b18f461cf9a68b7))
+
+
 ## v0.13.0 (2024-05-16)
 
 ### Feature
