@@ -147,6 +147,7 @@ jobs:
         with:
           environments: ${{ matrix.environments}}
           pixi-version: v0.22.0
+          cache-key: pixi-ENV_${{ matrix.environments }}-
           cache: true
           locked: false
 
@@ -207,6 +208,7 @@ jobs:
         with:
           environments: ${{ matrix.environments}}
           pixi-version: v0.22.0
+          cache-key: pixi-ENV_${{ matrix.environments }}-
           cache: true
           locked: false
 
