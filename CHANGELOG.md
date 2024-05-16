@@ -2,6 +2,13 @@
 
 
 
+## v0.9.1 (2024-05-16)
+
+### Fix
+
+* fix: conditoinal ([`d93b060`](https://github.com/jjjermiah/pypackage/commit/d93b06061faa6fa08fc2f04a338ede6b6090c338))
+
+
 ## v0.9.0 (2024-05-16)
 
 ### Feature
