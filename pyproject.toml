@@ -41,14 +41,8 @@ python-semantic-release = ">=8.5.1"
 hatch = "*"
 
 [tool.pixi.feature.publish.tasks]
-bump = { cmd = "hatch version minor", inputs = ["pyproject.toml"] }
-build = { cmd = "hatch build --clean", inputs = [
-  "src",
-], outputs = [
-  "dist/*",
-], depends-on = [
-  "bump",
-] }
+build = { cmd = "hatch build --clean", inputs = ["src"], outputs = ["dist/*"] }
+
 publish = { cmd = "hatch publish --yes --repo test", inputs = [
   "dist/*",
 ], depends-on = [
