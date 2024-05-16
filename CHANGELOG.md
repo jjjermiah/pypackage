@@ -2,6 +2,17 @@
 
 
 
+## v0.15.3 (2024-05-16)
+
+### Fix
+
+* fix: nice env ([`3d81d90`](https://github.com/jjjermiah/pypackage/commit/3d81d90ce34fae0a9fef133202290725a5ddc24e))
+
+### Unknown
+
+* add dev ([`6d5d10e`](https://github.com/jjjermiah/pypackage/commit/6d5d10ed69e74d8cbd4e3770d2462f73d99f1b0d))
+
+
 ## v0.15.2 (2024-05-16)
 
 ### Chore
