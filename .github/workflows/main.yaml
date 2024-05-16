@@ -112,6 +112,9 @@ jobs:
         # Set up operating system
         runs-on: ubuntu-latest
 
+        # Concurrency is for preventing multiple runs of the same workflow
+        concurrency: release
+
         outputs:
             released: ${{ steps.release.outputs.released }}
             version: ${{ steps.release.outputs.version }}
