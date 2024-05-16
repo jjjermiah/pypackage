@@ -2,6 +2,13 @@
 
 
 
+## v0.11.0 (2024-05-16)
+
+### Feature
+
+* feat: fix ([`f939424`](https://github.com/jjjermiah/pypackage/commit/f939424aa7ee378eb8e5bd6b07cd6f18aa05c113))
+
+
 ## v0.10.0 (2024-05-16)
 
 ### Feature
