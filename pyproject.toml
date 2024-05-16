@@ -71,6 +71,11 @@ docs = { cmd = "mkdocs build", inputs = ["docs"], outputs = ["site"] }
 [tool.pixi.feature.release.dependencies]
 python-semantic-release = ">=8.5.1"
 
+[tool.pixi.feature.release.tasks]
+semver = { cmd = "echo 'Next Version is: $(semantic-release -c releaserc.toml version --print)'", inputs = [
+  "src",
+] }
+
 [tool.pixi.feature.build.dependencies]
 hatch = "*"
 
