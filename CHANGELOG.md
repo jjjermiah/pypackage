@@ -6,11 +6,4 @@
 
 ### Feature
 
-* feat: first commit ([`65ba238`](https://github.com/jjjermiah/pixi-project-templates/commit/65ba238adf11ccdd9832ad78c6ce684f1e409cf8))
-
-
-## v0.0.0 (2024-05-16)
-
-### Unknown
-
-* Initial commit ([`e13c351`](https://github.com/jjjermiah/pixi-project-templates/commit/e13c35187688dafa78da5758f41dc17384e1b1a1))
+* feat: first commit ([`0253046`](https://github.com/jjjermiah/pypackage/commit/02530460d62d29b7511d08e00e0f5196e8a16bb4))
