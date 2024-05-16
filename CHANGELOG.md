@@ -2,6 +2,13 @@
 
 
 
+## v0.2.0 (2024-05-16)
+
+### Feature
+
+* feat: second commit ([`7d3411c`](https://github.com/jjjermiah/pypackage/commit/7d3411c1443acc70be93d03882462824f9c96ecc))
+
+
 ## v0.1.0 (2024-05-16)
 
 ### Feature
