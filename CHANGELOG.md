@@ -2,6 +2,13 @@
 
 
 
+## v0.6.2 (2024-05-16)
+
+### Fix
+
+* fix: add root_options to gha ([`f0de946`](https://github.com/jjjermiah/pypackage/commit/f0de946183e76416085ecf06c4bc1db8beb4766d))
+
+
 ## v0.6.1 (2024-05-16)
 
 ### Fix
