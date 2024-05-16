@@ -2,6 +2,13 @@
 
 
 
+## v0.6.1 (2024-05-16)
+
+### Fix
+
+* fix: typo in version_toml ([`bc74532`](https://github.com/jjjermiah/pypackage/commit/bc7453244debe422abd233e3f161047640c0ad5f))
+
+
 ## v0.6.0 (2024-05-16)
 
 ### Feature
