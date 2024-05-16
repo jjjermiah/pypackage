@@ -56,7 +56,7 @@ hatch = "*"
 # Builds the package and publishes it to the test.pypi.org repository
 build = { cmd = "hatch build --clean", inputs = ["src"], outputs = ["dist/*"] }
 
-publish-pypi = { cmd = "hatch publish --yes", inputs = [
+publish-pypi = { cmd = "hatch publish --yes --repo main", inputs = [
   "dist/*",
 ], depends-on = [
   "build",

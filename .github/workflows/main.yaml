@@ -126,8 +126,33 @@ jobs:
         env:
           HATCH_INDEX_USER: __token__
           HATCH_INDEX_AUTH: ${{ secrets.PYPI_API_TOKEN }}
+          HATCH_INDEX_REPO: https://upload.pypi.org/legacy/
         run: |
-          pixi run publish
+          pixi run publish-pypi
+
+  Test-PyPi-Installation:
+    needs: Publish-To-PyPi
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.12"]
+        environments: [publish]
+
+    steps:
+      - name: Checkout the code with tag ${{ needs.Continuous-Deployment.outputs.tag }}
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.Continuous-Deployment.outputs.tag }}
+
+      - name: setup python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install using PyPI
+        run: |
+          pip install testmypixipkg
 
   Publish-To-Test-PyPi:
     needs: Continuous-Deployment
@@ -160,7 +185,7 @@ jobs:
           HATCH_INDEX_USER: __token__
           HATCH_INDEX_AUTH: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
-          pixi run publish
+          pixi run publish-test
 
   Test-TestPypi-Installation:
     needs: Publish-To-Test-PyPi
