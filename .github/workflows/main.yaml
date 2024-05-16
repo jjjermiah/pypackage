@@ -37,7 +37,7 @@ jobs:
                   pixi info
 
             - name: Install Dev Environment
-              run: | 
+              run: |
                   pixi install -e dev
     #     - name: Test with pytest
     #       run: |
