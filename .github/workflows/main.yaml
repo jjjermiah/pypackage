@@ -22,7 +22,7 @@ jobs:
         # python-version: ["3.12", "3.11", "3.10"]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -50,14 +50,14 @@ jobs:
           name: coverage-report
           path: coverage-report
 
-  Continuous-Deployment:
+  Semantic-Release:
     permissions:
       contents: write
       packages: write
       issues: write
       pull-requests: write
 
-    # needs: [Unit-Tests]
+    needs: [Unit-Tests]
 
     # if pulling to main, deploy to PyPI
     if: github.ref == 'refs/heads/main'
@@ -110,7 +110,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout the code with tag ${{ needs.Continuous-Deployment.outputs.tag }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.Continuous-Deployment.outputs.tag }}
 
@@ -141,7 +141,7 @@ jobs:
 
     steps:
       - name: Checkout the code with tag ${{ needs.Continuous-Deployment.outputs.tag }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.Continuous-Deployment.outputs.tag }}
 
@@ -168,7 +168,7 @@ jobs:
 
     steps:
       - name: Checkout the code with tag ${{ needs.Continuous-Deployment.outputs.tag }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.Continuous-Deployment.outputs.tag }}
 
@@ -198,7 +198,7 @@ jobs:
 
     steps:
       - name: Checkout the code with tag ${{ needs.Continuous-Deployment.outputs.tag }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.Continuous-Deployment.outputs.tag }}
 

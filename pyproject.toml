@@ -21,11 +21,13 @@ platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
 testmypixipkg = { path = ".", editable = true }
 
 [tool.pixi.environments]
-dev = { features = ["test"], solve-group = "default" }
+dev = { features = ["test", "style", "docs"], solve-group = "default" }
 publish = { features = ["build", "release"], solve-group = "default" }
 
 [tool.pixi.tasks]
 
+####################################################################################################
+############################################## TEST ################################################
 [tool.pixi.feature.test.dependencies]
 pytest = "*"
 pytest-cov = "*"
@@ -46,6 +48,24 @@ test = { cmd = [
   "coverage-report/coverage.xml",
 ] }
 
+####################################################################################################
+############################################## STYLE ###############################################
+[tool.pixi.feature.style.dependencies]
+ruff = "*"
+
+[tool.pixi.feature.style.tasks]
+style = { cmd = "ruff check src", inputs = ["src"] }
+
+####################################################################################################
+############################################## DOCS ################################################
+[tool.pixi.feature.docs.dependencies]
+mkdocs = "*"
+
+[tool.pixi.feature.docs.tasks]
+docs = { cmd = "mkdocs build", inputs = ["docs"], outputs = ["site"] }
+
+####################################################################################################
+#################################### RELEASE & BUILD ###############################################
 [tool.pixi.feature.release.dependencies]
 python-semantic-release = ">=8.5.1"
 
@@ -67,3 +87,47 @@ publish-test = { cmd = "hatch publish --yes --repo test", inputs = [
 ], depends-on = [
   "build",
 ] }
+
+[tool.ruff]
+target-version = "py39"
+output-format = "full"
+line-length = 99
+fix = true
+# extend-exclude is used to exclude directories from the flake8 checks
+extend-exclude = ["docs/*", "tests/*"]
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "F",
+  "W",   # flake8
+  "C",   # mccabe
+  "I",   # isort
+  "N",   # pep8-naming
+  "D",   # flake8-docstrings
+  "ANN", # flake8-annotations
+  "S",   # flake8-bandit
+  "BLE", # flake8-blind-except
+  "B",   # flake8-bugbear
+  "A",   # flake8-builtins
+  "G",   # flake8-logging-format
+  "ERA", # eradicate
+  "ISC", # flake8-implicit-str-concat
+  "RUF", # Ruff-specific rules
+]
+ignore = ["ANN101"]
+unfixable = [
+  "ERA", # Don't remove commented-out code
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+known-first-party = ["{{ cookiecutter.project_slug }}"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
