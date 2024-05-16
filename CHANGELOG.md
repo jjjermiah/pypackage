@@ -2,6 +2,17 @@
 
 
 
+## v0.5.0 (2024-05-16)
+
+### Feature
+
+* feat: update ([`ce3adbd`](https://github.com/jjjermiah/pypackage/commit/ce3adbd4c3b03dc43721924bbf10d0ccc7ba7d79))
+
+### Fix
+
+* fix: add concurrency ([`67c888a`](https://github.com/jjjermiah/pypackage/commit/67c888aa4a8f3f72ebffe2a7f24de58d7693cd0c))
+
+
 ## v0.4.1 (2024-05-16)
 
 ### Ci
