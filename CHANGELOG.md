@@ -2,6 +2,17 @@
 
 
 
+## v0.4.1 (2024-05-16)
+
+### Ci
+
+* ci(github-actions): enable unit tests and continuous deployment workflows ([`5e75a47`](https://github.com/jjjermiah/pypackage/commit/5e75a47cb4a5e77f6906eda023bd4b97fa47f207))
+
+### Fix
+
+* fix(main.yaml): reconfigure Pixi installation and running commands to align with latest version requirements and installation process, also add support for installing development environment with &#34;pixi install -e dev&#34; command ([`ccba365`](https://github.com/jjjermiah/pypackage/commit/ccba36540b97d183dcc4d25e03fc506d11924703))
+
+
 ## v0.4.0 (2024-05-16)
 
 ### Feature
