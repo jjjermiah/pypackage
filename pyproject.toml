@@ -55,19 +55,15 @@ hatch = "*"
 [tool.pixi.feature.build.tasks]
 # Builds the package and publishes it to the test.pypi.org repository
 build = { cmd = "hatch build --clean", inputs = ["src"], outputs = ["dist/*"] }
-publish = { cmd = "hatch publish --yes --repo test", inputs = [
+
+publish-pypi = { cmd = "hatch publish --yes", inputs = [
   "dist/*",
 ], depends-on = [
   "build",
 ] }
 
-test_pypi_install = { cmd = [
-  # Test installing from test.pypi.org
-  "pip",
-  "install",
-  "--index-url",
-  "https://test.pypi.org/simple/",
-  "--extra-index-url",
-  "https://pypi.org/simple",
-  "testmypixipkg",
+publish-test = { cmd = "hatch publish --yes --repo test", inputs = [
+  "dist/*",
+], depends-on = [
+  "build",
 ] }
