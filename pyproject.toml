@@ -1,6 +1,6 @@
 [project]
 name = "testmypixipkg"
-version = "0.7.0"
+version = "0.8.0"
 description = "Add a short description here"
 authors = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
 requires-python = ">= 3.11"

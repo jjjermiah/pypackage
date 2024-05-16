@@ -2,6 +2,17 @@
 
 
 
+## v0.8.0 (2024-05-16)
+
+### Feature
+
+* feat: fix lock ([`3fb784d`](https://github.com/jjjermiah/pypackage/commit/3fb784d46482b4b5d101aaa3dc43bffd5c3b2add))
+
+### Fix
+
+* fix: no lock ([`f422101`](https://github.com/jjjermiah/pypackage/commit/f4221012ad826450ec020288433459611237cbff))
+
+
 ## v0.7.0 (2024-05-16)
 
 ### Feature
