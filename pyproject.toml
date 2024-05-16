@@ -1,0 +1,67 @@
+[project]
+name = "testmypixipkg"
+dynamic = ["version"]
+description = "Add a short description here"
+authors = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
+requires-python = ">= 3.11"
+dependencies = ["rich", "rich-click"]
+
+[project.scripts]
+pypkg = "testmypixipkg.__main__:say_hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
+
+[tool.pixi.pypi-dependencies]
+testmypixipkg = { path = ".", editable = true }
+
+[tool.pixi.environments]
+dev = { features = ["test"], solve-group = "default" }
+publish = { features = ["publish", "deploy"], solve-group = "default" }
+
+[tool.pixi.tasks]
+
+[tool.pixi.feature.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+pytest-xdist = "*"
+
+[tool.pixi.feature.test.tasks]
+test = "pytest tests/"
+
+[tool.pixi.feature.deploy.dependencies]
+python-semantic-release = ">=8.5.1"
+
+[tool.pixi.feature.publish.dependencies]
+hatch = "*"
+
+[tool.pixi.feature.publish.tasks]
+bump = { cmd = "hatch version minor", inputs = ["pyproject.toml"] }
+build = { cmd = "hatch build --clean", inputs = [
+  "src",
+], outputs = [
+  "dist/*",
+], depends-on = [
+  "bump",
+] }
+publish = { cmd = "hatch publish --yes --repo test", inputs = [
+  "dist/*",
+], depends-on = [
+  "build",
+] }
+
+test_pypi_install = { cmd = [
+  # Test installing from test.pypi.org
+  "pip",
+  "install",
+  "--index-url",
+  "https://test.pypi.org/simple/",
+  "--extra-index-url",
+  "https://pypi.org/simple",
+  "testmypixipkg",
+], depends-on = ["publish"] }
