@@ -2,6 +2,8 @@
 name = "testmypixipkg"
 version = "0.13.0"
 description = "Add a short description here"
+license = "MIT"
+readme = "README.md"
 authors = [{ name = "Jermiah Joseph", email = "jermiahjoseph98@gmail.com" }]
 requires-python = ">= 3.11"
 dependencies = ["rich", "rich-click"]
