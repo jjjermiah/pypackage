@@ -143,6 +143,8 @@ jobs:
               uses: python-semantic-release/python-semantic-release@master
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
+                  root_options: "-v --config releaserc.toml"
+                  
 
     # Publish-To-PyPi:
     #   needs: Continuous-Deployment
