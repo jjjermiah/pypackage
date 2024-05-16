@@ -9,6 +9,10 @@ on:
     branches: [main, development]
 
 jobs:
+
+  ################################################################################################
+  # Unit-Tests: Run unit tests using pytest
+  ################################################################################################
   Unit-Tests:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 15 # Consider increasing timeout
@@ -29,7 +33,7 @@ jobs:
           environments: ${{ matrix.environments}}
           pixi-version: v0.22.0
           cache: true
-          cache-key: pixi-${{ runner.os }}-${{ matrix.environments }}
+          cache-key: pixi-ENV_${{ matrix.environments }}-
           locked: false
 
       - name: Run pytest
@@ -45,6 +49,9 @@ jobs:
           name: coverage-report
           path: coverage-report
 
+  ################################################################################################
+  # Ruff: Run ruff linter
+  ################################################################################################
   Ruff:
     runs-on: ubuntu-latest
     strategy:
@@ -60,12 +67,15 @@ jobs:
           environments: ${{ matrix.environments}}
           pixi-version: v0.22.0
           cache: true
-          cache-key: pixi-${{ runner.os }}-${{ matrix.environments }}
+          cache-key: pixi-ENV_${{ matrix.environments }}-
           locked: false
 
       - name: Run Ruff
         run: pixi run style
 
+  ################################################################################################
+  # Semantic-Release: Run semantic-release to automate versioning and publishing
+  ################################################################################################
   Semantic-Release:
     permissions:
       contents: write
@@ -114,6 +124,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           root_options: "-v --config releaserc.toml"
 
+  ################################################################################################
+  # Publish-To-PyPi & Test-PyPi-Installation: Publish to PyPI and test installation
+  ################################################################################################
   Publish-To-PyPi:
     needs: Semantic-Release
     if: needs.Semantic-Release.outputs.released == 'true'
@@ -169,6 +182,9 @@ jobs:
         run: |
           pip install testmypixipkg
 
+  ################################################################################################
+  # Publish-To-Test-PyPi & Test-TestPypi-Installation: Publish to TestPyPI and test installation
+  ################################################################################################
   Publish-To-Test-PyPi:
     needs: Semantic-Release
 
