@@ -128,14 +128,20 @@ jobs:
                   pixi-version: v0.22.0
                   cache: true
                   locked: false
-                  
+
             - name: Publish to TestPyPI
-              if: steps.release.outputs.released == 'true'
               uses: pypa/gh-action-pypi-publish@release/v1
               with:
-                user: __token__
-                password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-                repository-url: https://test.pypi.org/legacy/
+                  user: __token__
+                  password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+                  repository-url: https://test.pypi.org/legacy/
+
+            - name: Publish to PyPI
+              uses: pypa/gh-action-pypi-publish@release/v1
+              with:
+                  user: __token__
+                  password: ${{ secrets.PYPI_API_TOKEN }}
+                  
     # Publish-To-PyPi:
     #   needs: Continuous-Deployment
     #   if: needs.Continuous-Deployment.outputs.released == 'true'
