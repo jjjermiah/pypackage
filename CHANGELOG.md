@@ -2,6 +2,21 @@
 
 
 
+## v0.13.0 (2024-05-16)
+
+### Feature
+
+* feat: add ruff to ci ([`2b61b24`](https://github.com/jjjermiah/pypackage/commit/2b61b2461e6960c7f75177bc39527a2981a32eee))
+
+* feat: add ruff ([`3db3a38`](https://github.com/jjjermiah/pypackage/commit/3db3a3853fd2864aa31b815646c97ad11af2e599))
+
+### Fix
+
+* fix: rename CD to semantic release ([`c264e7b`](https://github.com/jjjermiah/pypackage/commit/c264e7bbd209520ae8db086855d9a2d66c029cab))
+
+* fix: add recipe to ignore ([`7acb290`](https://github.com/jjjermiah/pypackage/commit/7acb2906473d8f0d331890be4bed85264b05d7e0))
+
+
 ## v0.12.0 (2024-05-16)
 
 ### Feature
