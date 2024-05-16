@@ -41,8 +41,8 @@ python-semantic-release = ">=8.5.1"
 hatch = "*"
 
 [tool.pixi.feature.publish.tasks]
+# Builds the package and publishes it to the test.pypi.org repository
 build = { cmd = "hatch build --clean", inputs = ["src"], outputs = ["dist/*"] }
-
 publish = { cmd = "hatch publish --yes --repo test", inputs = [
   "dist/*",
 ], depends-on = [
