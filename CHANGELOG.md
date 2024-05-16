@@ -2,6 +2,13 @@
 
 
 
+## v0.9.0 (2024-05-16)
+
+### Feature
+
+* feat: upload to test pypi ([`8c26c44`](https://github.com/jjjermiah/pypackage/commit/8c26c4464c748464cb82e2ea543a782e26c914bd))
+
+
 ## v0.8.0 (2024-05-16)
 
 ### Feature
