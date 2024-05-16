@@ -29,19 +29,16 @@ jobs:
             - name: Install Pixi
               uses: prefix-dev/setup-pixi@v0.7.0
               with:
-                  pixi-version: v0.21.1
+                  pixi-version: v0.22.0
                   cache: true
-            
+
             - name: Run Pixi
               run: |
-                pixi --version
-                pixi --help
-    #     - name: Install poetry
-    #       uses: snok/install-poetry@v1
+                  pixi info
 
-    #     - name: Install dependencies
-    #       run: poetry install
-
+            - name: Install Dev Environment
+              run: | 
+                  pixi install -e dev
     #     - name: Test with pytest
     #       run: |
     #         # Github action runners now have 4 cores
