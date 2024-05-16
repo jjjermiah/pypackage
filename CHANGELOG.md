@@ -2,6 +2,21 @@
 
 
 
+## v0.7.0 (2024-05-16)
+
+### Feature
+
+* feat: add better config for ci ([`b98f283`](https://github.com/jjjermiah/pypackage/commit/b98f28396437873b7381d9e0959a3397b6afb9a0))
+
+### Fix
+
+* fix: add comment ([`9f27c30`](https://github.com/jjjermiah/pypackage/commit/9f27c305f0be5214ea3027e98abdbd56edf0ef89))
+
+### Unknown
+
+* add pixi cmds ([`f6171ec`](https://github.com/jjjermiah/pypackage/commit/f6171ecd8333a7c1adf98ba15428fea472ebdb90))
+
+
 ## v0.6.2 (2024-05-16)
 
 ### Fix
