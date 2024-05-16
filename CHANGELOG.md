@@ -2,6 +2,13 @@
 
 
 
+## v0.9.2 (2024-05-16)
+
+### Fix
+
+* fix: use pixi to run ([`189f567`](https://github.com/jjjermiah/pypackage/commit/189f5677ec2aa3851dba952698b95e687d566f7e))
+
+
 ## v0.9.1 (2024-05-16)
 
 ### Fix
