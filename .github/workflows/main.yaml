@@ -15,8 +15,10 @@ jobs:
 
         strategy:
             matrix:
-                os: [ubuntu-latest, macos-latest, macos-14, windows-latest]
-                python-version: ["3.12", "3.11", "3.10"]
+                os: [ubuntu-latest]
+                python-version: ["3.12"]
+                # os: [ubuntu-latest, macos-latest, macos-14, windows-latest]
+                # python-version: ["3.12", "3.11", "3.10"]
 
         steps:
             - uses: actions/checkout@v3
@@ -39,6 +41,10 @@ jobs:
             - name: Install Dev Environment
               run: |
                   pixi install -e dev
+
+            - name: Run pytest
+              run: |
+                  pixi test
     #     - name: Test with pytest
     #       run: |
     #         # Github action runners now have 4 cores

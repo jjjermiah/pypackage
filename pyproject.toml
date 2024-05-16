@@ -32,7 +32,7 @@ pytest-cov = "*"
 pytest-xdist = "*"
 
 [tool.pixi.feature.test.tasks]
-test = "pytest tests/"
+test = "pytest --numprocesses=auto -s --verbose --cov=testmypixipkg --cov-report=xml"
 
 [tool.pixi.feature.deploy.dependencies]
 python-semantic-release = ">=8.5.1"
