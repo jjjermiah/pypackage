@@ -3761,7 +3761,7 @@ packages:
   name: testmypixipkg
   version: 0.17.0
   path: .
-  sha256: 3976a15627d677bf46835d275934348248cd899e6c42a3b6ea9a8e28d40a2b56
+  sha256: 7d6d73cce31ae826613d3f9273eea86d922037e8dbcd64096a670ca03e8df02d
   requires_dist:
   - rich
   - rich-click
