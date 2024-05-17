@@ -3759,9 +3759,9 @@ packages:
   timestamp: 1708953086199
 - kind: pypi
   name: testmypixipkg
-  version: 0.17.0
+  version: 0.18.0
   path: .
-  sha256: 316b98e98c29137c3b595d893cc47f8c9c825c4450da655fb1d18d0e5e093d6f
+  sha256: c62fcbbb1cbbec9e6dbf3287734665774331280513bac05640b82a2a25b6213e
   requires_dist:
   - rich
   - rich-click
