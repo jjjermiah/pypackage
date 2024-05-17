@@ -2,6 +2,15 @@
 
 
 
+## v0.18.3 (2024-05-17)
+
+### Fix
+
+* fix: lock ([`26dba1d`](https://github.com/jjjermiah/pypackage/commit/26dba1d47c1bb8085c010ea616040598932dac22))
+
+* fix: idk ([`c7603a4`](https://github.com/jjjermiah/pypackage/commit/c7603a436f4a2decfb1d35b2508ad715a5face2a))
+
+
 ## v0.18.2 (2024-05-17)
 
 ### Ci
