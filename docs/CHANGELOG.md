@@ -2,6 +2,51 @@
 
 
 
+## v0.18.0 (2024-05-17)
+
+### Ci
+
+* ci: add permissions for docs ([`e399e91`](https://github.com/jjjermiah/pypackage/commit/e399e919e993a883dfbc9923bf443a2921bd57cc))
+
+* ci: revert ([`664ce2d`](https://github.com/jjjermiah/pypackage/commit/664ce2d84c812350920212784b69829440fe12a7))
+
+* ci: fix ([`7a29926`](https://github.com/jjjermiah/pypackage/commit/7a2992661be1292428bd1bb701a069b60f1808f7))
+
+* ci: test env version ref ([`4ac0388`](https://github.com/jjjermiah/pypackage/commit/4ac03881965008633bf4ae017946550e401c58f4))
+
+### Documentation
+
+* docs(config): update paths and refs for CHANGELOG.md ([`d53b9dd`](https://github.com/jjjermiah/pypackage/commit/d53b9ddd0c7bed293ddafcad1f9755f996f2a46b))
+
+### Feature
+
+* feat: looking good ([`2cc4ad0`](https://github.com/jjjermiah/pypackage/commit/2cc4ad0fa4e0ef91650bcfc5153729aa059a84e1))
+
+* feat: fix release ([`8e34988`](https://github.com/jjjermiah/pypackage/commit/8e349886fb0ff2acba5a68185573896183fbb208))
+
+* feat(project): expand README, clean dependencies, and update metadata ([`a409819`](https://github.com/jjjermiah/pypackage/commit/a409819b34141bb856bb83030569a5ba41d4f5b6))
+
+* feat: add docs ([`68b20ef`](https://github.com/jjjermiah/pypackage/commit/68b20ef0e35364e59a21d453718efd6bbce72e52))
+
+### Fix
+
+* fix: lock ([`2e48cc6`](https://github.com/jjjermiah/pypackage/commit/2e48cc63caf9e704d929c188e22e06da90670970))
+
+* fix: actually release ([`abd3250`](https://github.com/jjjermiah/pypackage/commit/abd325041562c2efaa65e756b9ae075d042b934a))
+
+* fix: force deploy docs ([`017b775`](https://github.com/jjjermiah/pypackage/commit/017b775dfb3c39f2817cbbb33353ed8a41b4ec38))
+
+* fix: publish nolock ([`756c4bc`](https://github.com/jjjermiah/pypackage/commit/756c4bc72ac53ca32658bc0046ab84b974ccfb16))
+
+* fix: lock ([`d3df023`](https://github.com/jjjermiah/pypackage/commit/d3df023154a21a59a7ea3ecf5ebd4516ff8968bf))
+
+### Unknown
+
+* fix:update lock ([`5c831fd`](https://github.com/jjjermiah/pypackage/commit/5c831fd80fd81e518601868cea5c161609685749))
+
+* `ci(github-actions): standardize env variable syntax` ([`ca14640`](https://github.com/jjjermiah/pypackage/commit/ca146401e0f58518066aadafcaf2863a835ae210))
+
+
 ## v0.17.0 (2024-05-17)
 
 ### Feature
