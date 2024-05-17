@@ -58,7 +58,7 @@ default_bump_level = 0
 [semantic_release.remote]
 name = "origin"
 type = "github"
-ignore_token_for_push = true
+ignore_token_for_push = false
 insecure = false
 
 [semantic_release.publish]
