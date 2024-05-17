@@ -30,6 +30,7 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
           environments: ${{ env.PIXI_ENV }}
+          log-level: "vv"
           pixi-version: v0.22.0
           cache: true
           cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
