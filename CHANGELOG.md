@@ -2,6 +2,19 @@
 
 
 
+## v0.16.0 (2024-05-17)
+
+### Feature
+
+* feat: debug ([`90b11cb`](https://github.com/jjjermiah/pypackage/commit/90b11cba1355a310bf830e1d6e542ac62cf009fb))
+
+### Fix
+
+* fix: lock ([`4806afc`](https://github.com/jjjermiah/pypackage/commit/4806afc6b7c9ec0e5f2febd98705e3ca690829d3))
+
+* fix: no lock ([`f7a3ca9`](https://github.com/jjjermiah/pypackage/commit/f7a3ca9b17490fd1087d68b6ae4f5c5fb29cf123))
+
+
 ## v0.15.4 (2024-05-17)
 
 ### Fix
