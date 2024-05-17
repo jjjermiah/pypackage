@@ -2,6 +2,17 @@
 
 
 
+## v0.17.0 (2024-05-17)
+
+### Feature
+
+* feat: add cli module and separate ruff.toml ([`76190ff`](https://github.com/jjjermiah/pypackage/commit/76190ffd9f25207ced1d7e1502b459f65ae85e1e))
+
+### Unknown
+
+* chore (pixi.lock): upgrade testmypixipkg version from 0.15.4 to 0.16.0 and update sha256 checksum to match new version ([`0bc4889`](https://github.com/jjjermiah/pypackage/commit/0bc48893ca5f02882a8ec7aafc6b7638d19dbafe))
+
+
 ## v0.16.0 (2024-05-17)
 
 ### Feature
