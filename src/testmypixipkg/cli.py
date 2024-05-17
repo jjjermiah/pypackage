@@ -5,7 +5,8 @@ import rich_click as click
 
 def test_func() -> None:
     """A test function."""
-    click.echo("Hello, World!")
+    click.echo("This is a test function.")
+
 
 if "__main__" == __name__:
     test_func()

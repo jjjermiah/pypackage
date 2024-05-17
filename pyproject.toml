@@ -18,7 +18,7 @@ dependencies = ["rich", "rich-click"]
 homepage = "https://github.com/jjjermiah/pypackage"
 repository = "https://github.com/jjjermiah/pypackage"
 documentation = "https://jjjermiah.github.io/pypackage/"
-changelog = "https://github.com/jjjermiah/pypackage/blob/main/CHANGELOG.md"
+changelog = "https://github.com/jjjermiah/pypackage/blob/main/docs/CHANGELOG.md"
 issues = "https://github.com/jjjermiah/pypackage/issues"
 
 [project.scripts]
