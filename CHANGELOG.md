@@ -2,6 +2,13 @@
 
 
 
+## v0.15.4 (2024-05-17)
+
+### Fix
+
+* fix: verbose ([`e1015a1`](https://github.com/jjjermiah/pypackage/commit/e1015a10269a7efd97340b232e911fd9035386bf))
+
+
 ## v0.15.3 (2024-05-16)
 
 ### Fix
