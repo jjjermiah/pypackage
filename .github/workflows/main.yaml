@@ -32,7 +32,7 @@ jobs:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
           cache: false
-          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run pytest
         run: |
@@ -66,7 +66,7 @@ jobs:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
           cache: false
-          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run Ruff
         run: pixi run style
@@ -102,7 +102,7 @@ jobs:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
           cache: false
-          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Build and deploy documentation
         run: pixi run doc-deploy
@@ -157,7 +157,7 @@ jobs:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
           cache: false
-          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run semantic-release
         id: release
@@ -187,7 +187,7 @@ jobs:
         with:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           cache: false
           locked: false # wont be the same because of the tag
 
@@ -248,7 +248,7 @@ jobs:
         with:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           cache: false
           locked: false # wont be the same because of the tag
 
