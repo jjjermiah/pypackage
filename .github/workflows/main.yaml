@@ -113,7 +113,6 @@ jobs:
   Semantic-Release:
     permissions:
       # Read releases read-all
-      releases: read
       contents: write
       packages: write
       issues: write
@@ -126,6 +125,7 @@ jobs:
 
     env:
       PIXI_ENV: "publish"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       matrix:
         os: [ubuntu-latest]
