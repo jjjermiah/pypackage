@@ -154,7 +154,6 @@ jobs:
           pixi-version: v0.22.0
           cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           cache: true
-          locked: false
 
       - name: Publish to PyPI
         env:
@@ -215,7 +214,6 @@ jobs:
           pixi-version: v0.22.0
           cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
           cache: true
-          locked: false
 
       - name: Publish to TestPyPI
         env:
