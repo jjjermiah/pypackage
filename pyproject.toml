@@ -44,7 +44,7 @@ dev = { features = ["test", "style", "docs"], solve-group = "default" }
 publish = { features = ["build", "release"], solve-group = "default" }
 
 [tool.pixi.tasks]
-
+hello = ' echo "Hello World!" '
 ############################################## TEST ################################################
 [tool.pixi.feature.test.dependencies]
 pytest = "*"
