@@ -56,11 +56,11 @@ patch_tags = ["fix", "perf"]
 default_bump_level = 0
 
 [semantic_release.remote]
+token = { env = "GITHUB_TOKEN" }
 name = "origin"
 type = "github"
 ignore_token_for_push = false
 insecure = false
-token = "GH_TOKEN"
 
 [semantic_release.publish]
 dist_glob_patterns = ["dist/*"]
