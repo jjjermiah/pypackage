@@ -60,6 +60,7 @@ name = "origin"
 type = "github"
 ignore_token_for_push = false
 insecure = false
+token = "GH_TOKEN"
 
 [semantic_release.publish]
 dist_glob_patterns = ["dist/*"]
