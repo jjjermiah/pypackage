@@ -2,6 +2,19 @@
 
 
 
+## v0.19.0 (2024-05-17)
+
+### Feature
+
+* feat: semrel needs ([`61e5b8f`](https://github.com/jjjermiah/pypackage/commit/61e5b8f7e977ee6e9e9044dacdf959636bb68d91))
+
+### Fix
+
+* fix: lock ([`3cdd9ee`](https://github.com/jjjermiah/pypackage/commit/3cdd9ee834bad7dbbd78375787efa9041d078a3f))
+
+* fix: token ([`7475e5a`](https://github.com/jjjermiah/pypackage/commit/7475e5aa57e79e31fcab3a87e9ae80942acd7e8a))
+
+
 ## v0.18.4 (2024-05-17)
 
 ### Fix

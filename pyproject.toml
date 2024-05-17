@@ -3,7 +3,7 @@
 #__________________________________________________________________________________________________#
 [project]
 name = "testmypixipkg"
-version = "0.18.4"
+version = "0.19.0"
 description = "Add a short description here"
 license = "MIT"
 readme = "README.md"
