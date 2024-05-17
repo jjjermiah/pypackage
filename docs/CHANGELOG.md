@@ -2,6 +2,15 @@
 
 
 
+## v0.18.4 (2024-05-17)
+
+### Fix
+
+* fix: lock ([`9ec7008`](https://github.com/jjjermiah/pypackage/commit/9ec7008d567f62e9fd5a2a79912e0d037ac1f2ce))
+
+* fix: add token ([`190e321`](https://github.com/jjjermiah/pypackage/commit/190e3216b5d17c795ea122774f9907d2c3082f82))
+
+
 ## v0.18.3 (2024-05-17)
 
 ### Fix
