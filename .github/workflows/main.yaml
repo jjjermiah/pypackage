@@ -30,8 +30,8 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
           environments: ${{ env.PIXI_ENV }}
-          # pixi-version: v0.22.0
-          # cache: true
+          pixi-version: v0.22.0
+          cache: false
           cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run pytest
@@ -64,8 +64,8 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
           environments: ${{ env.PIXI_ENV }}
-          # pixi-version: v0.22.0
-          # cache: true
+          pixi-version: v0.22.0
+          cache: false
           cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run Ruff
@@ -82,7 +82,7 @@ jobs:
     permissions:
       # Need to give the action permission to write to the repository to deploy the docs
       contents: write
-    
+
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -100,19 +100,20 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.7.0
         with:
           environments: ${{ env.PIXI_ENV }}
-          # pixi-version: v0.22.0
-          # cache: true
+          pixi-version: v0.22.0
+          cache: false
           cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Build and deploy documentation
         run: pixi run doc-deploy
-
 
   ################################################################################################
   # Semantic-Release: Run semantic-release to automate versioning and publishing
   ################################################################################################
   Semantic-Release:
     permissions:
+      # Read releases read-all
+      releases: read
       contents: write
       packages: write
       issues: write
@@ -155,8 +156,8 @@ jobs:
         with:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          # cache: true
-          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          cache: false
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run semantic-release
         id: release
@@ -186,8 +187,8 @@ jobs:
         with:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
-          # cache: true
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          cache: false
           locked: false # wont be the same because of the tag
 
       - name: Publish to PyPI
@@ -247,8 +248,8 @@ jobs:
         with:
           environments: ${{ env.PIXI_ENV }}
           pixi-version: v0.22.0
-          # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
-          # cache: true
+          cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
+          cache: false
           locked: false # wont be the same because of the tag
 
       - name: Publish to TestPyPI
