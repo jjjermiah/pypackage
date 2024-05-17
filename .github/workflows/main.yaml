@@ -118,7 +118,7 @@ jobs:
       issues: write
       pull-requests: write
 
-    # needs: [Unit-Tests, Ruff]
+    needs: [Unit-Tests, Ruff, Docs]
 
     # if pulling to main, deploy to PyPI
     if: github.ref == 'refs/heads/main'
