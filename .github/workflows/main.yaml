@@ -125,7 +125,7 @@ jobs:
 
     env:
       PIXI_ENV: "publish"
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -160,6 +160,8 @@ jobs:
           # cache-key: pixi-ENV_${{ env.PIXI_ENV }}-
 
       - name: Run semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         id: release
         run: pixi run release
 
