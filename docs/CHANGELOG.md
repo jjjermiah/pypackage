@@ -2,6 +2,21 @@
 
 
 
+## v0.18.2 (2024-05-17)
+
+### Ci
+
+* ci: no needs ([`21b4659`](https://github.com/jjjermiah/pypackage/commit/21b465996fbc5085e5feedea3d0b22ad654b4817))
+
+### Fix
+
+* fix: no key ([`a730baf`](https://github.com/jjjermiah/pypackage/commit/a730baf6358c5e94b936f33f84ba954ee381a348))
+
+* fix: token ([`edd4e0f`](https://github.com/jjjermiah/pypackage/commit/edd4e0fea74ba473ce7bb9c08379b6e598136f0a))
+
+* fix: add token? ([`58f3c26`](https://github.com/jjjermiah/pypackage/commit/58f3c2638fa7e756e2e7ac4f078ee8303fb1f6b7))
+
+
 ## v0.18.1 (2024-05-17)
 
 ### Fix
