@@ -2,6 +2,17 @@
 
 
 
+## v0.18.1 (2024-05-17)
+
+### Fix
+
+* fix: no pixi cache ([`f6bc401`](https://github.com/jjjermiah/pypackage/commit/f6bc401594d3d4f2e80622c65dbab60620216352))
+
+* fix: locks ([`a4f45c4`](https://github.com/jjjermiah/pypackage/commit/a4f45c4fae353ee684ef1050c37fbeb63f752c7c))
+
+* fix: token i think ([`12bf904`](https://github.com/jjjermiah/pypackage/commit/12bf904d6479b8ab575e99bfc616aae9f0d2c3c0))
+
+
 ## v0.18.0 (2024-05-17)
 
 ### Ci
