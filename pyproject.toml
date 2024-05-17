@@ -87,7 +87,7 @@ cmd = "mkdocs serve -f mkdocs.yaml"
 inputs = ["docs"]
 
 [tool.pixi.feature.docs.tasks.doc-deploy]
-cmd = "mkdocs gh-deploy -f mkdocs.yaml"
+cmd = "mkdocs gh-deploy -f mkdocs.yaml --force"
 inputs = ["docs"]
 
 #################################### RELEASE & BUILD ###############################################
